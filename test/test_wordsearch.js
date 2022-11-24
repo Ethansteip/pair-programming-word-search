@@ -36,7 +36,7 @@ describe("#wordSearch()", function() {
   });
 
 
-  it("should return true if the word is present even if spelt vertically", function() {
+  it("should return true if the word is present and is spelt vertically", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'D', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'O', 'L', 'D'],
@@ -51,23 +51,6 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
-
-  it("should return false if the word is present even if spelt vertically", function() {
-    const result = wordSearch([
-      ['A', 'W', 'C', 'F', 'Q', 'Q', 'A', 'L'],
-      ['S', 'E', 'I', 'N', 'F', 'R', 'L', 'D'],
-      ['Y', 'F', 'C', 'F', 'Q', 'J', 'A', 'L'],
-      ['H', 'M', 'J', 'T', 'E', 'C', 'R', 'G'],
-      ['W', 'H', 'C', 'S', 'Y', 'K', 'R', 'L'],
-      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
-      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
-      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
-      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'SEINFELD');
-
-    assert.isFalse(result);
-  });
-
 
   it("should return false if the word is present, but split between rows", function() {
     const result = wordSearch([
